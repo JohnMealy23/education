@@ -253,7 +253,7 @@ const result = myObj.deeperObj.value2
 
 ## Example 
 
-We've gone over strings, arrays and objests now.  At this point, maybe it would help to have an example of how they all might be used together.
+We've gone over strings, arrays and objects now.  At this point, maybe it would help to have an example of how they all might be used together.
 
 One place you might find all of these types together would be in a bulletpoint list.  Here's a bulletpoint list we can use as an example:
 
@@ -270,12 +270,31 @@ One place you might find all of these types together would be in a bulletpoint l
         * shoes
         * corndog on a stick
 
-Pretty simple, right?  We've got our over-arching bucket, "Todo", and under it we have subsections.  In JavaScript, those subsections would be represented by nested objects:
+Pretty simple, right?  We've got our over-arching bucket (the variable), "Todo".  Under the over-arching bucket we have subsections (object keys).  And finally, at the lowest level, we have lists (arrays) of the items (strings) we need.  
 
+So let's translate this to how Javascript can represent it.
+
+First, we make the over-arching bucket for our to-do list:
+
+```javascript
+const todo = {}
 ```
 
+Now let's revise that, to fill it in with the subsections of our todo:
 
-If we were to represent this with an object, it would look something like this:
+```javascript
+const todo = {
+    groceries: {
+        produce: []
+        meats: []
+    },
+    mall: []
+}
+```
+
+Note that at the deepest subsection (key) of each object, we've added opening and closing square brackets.  Remember arrays?  This are how one holds lists of items in JavaScript.  Since the end of the line for each subsection is a list, arrays are perfect for the job.
+
+Now let's populate those arrays with the actual items on our list:
 
 ```javascript
 const todo = {
@@ -297,19 +316,33 @@ const todo = {
 }
 ```
 
-This is a big one.  You'll note we're using arrays here - lists of items that start with an opening square bracket (`[`) and end with a closing square bracket (`]`).  
+And there you have it - a bullet-point list a computer will be able to understand, complete with a variable, nested objects, arrays, and strings.  
+
+### Summary
+
+In the above sections we've covered how a computer can hold data in different ways.  These inlude variables, arrays and objects.  We also looked at some different simple data types (known as primative types), such as numbers, string (text) and boolean (true/false).
+
+Now that we've got some basics for how data is stored, let's look at actually *doing* something with the data.  In the next section we'll look at how we can tell the computer can make decisions based on the data, and how we can structure this decision-making code.
+
+## Let's Get Executional!
 
 ### If statements
 
-
+```javascript
 let what
-const swich = callToTheServerWithLoginInformation()
+const which = true
 
-if (swich) {
+if (which) {
   what = 'hello'
 } else {
   what = 'goodbye'
 }
+```
 
-// What does `what` equal?
+In the above example, can you guess at the final resulting value of the `what` variable is?
 
+### Functions
+
+### Imports/Exports
+
+## Asynchronicity
