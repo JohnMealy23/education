@@ -339,9 +339,10 @@ if (which) {
 }
 ```
 
+In the above example, can you guess at the final resulting value of the `what` variable is?
+
 ### For Loops
 
-In the above example, can you guess at the final resulting value of the `what` variable is?
 
 ### Functions
 
