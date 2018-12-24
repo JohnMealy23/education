@@ -348,14 +348,24 @@ In the above example, can you guess at the final resulting value of the `what` v
 : D
 
 #### Recursive Functions
-function forLoop(remainder, value) {
-	if (remainder > 0) {
-		const newRemainder = remainder - 1;
-		return forLoop(newRemainder, value - 1)
+
+```javascript
+function forLoop(iterations, value) {
+	if (iterations > 0) {
+		const remainingIterations = iterations - 1
+        const newValue = value - 1
+		return forLoop(remainingIterations, newValue)
 	} else {
 		return value;
 	}
 }
+```
+
+```javascript
+const result = forLoop(10, 100)
+```
+
+`result` now equals `90`.
 
 ### Imports/Exports
 
