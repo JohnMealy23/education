@@ -326,7 +326,7 @@ Now that we've got some basics for how data is stored, let's look at actually *d
 
 ## Let's Get Executional!
 
-### If statements
+### If Statements
 
 ```javascript
 let what
@@ -339,10 +339,31 @@ if (which) {
 }
 ```
 
+### For Loops
+
 In the above example, can you guess at the final resulting value of the `what` variable is?
 
 ### Functions
 
+: D
+
+#### Recursive Functions
+function forLoop(remainder, value) {
+	if (remainder > 0) {
+		const newRemainder = remainder - 1;
+		return forLoop(newRemainder, value - 1)
+	} else {
+		return value;
+	}
+}
+
 ### Imports/Exports
 
 ## Asynchronicity
+
+### Callback Functions
+
+### Promises
+
+### Async/Await
+
